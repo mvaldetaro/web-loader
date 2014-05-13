@@ -1,0 +1,123 @@
+<polymer-element name="web-loader" attributes="type color">
+  <template>
+    <template id="dot" if="{{type == 'dot'}}">
+      <div class="loader6"></div>
+      <style>
+      /*
+        author: TaniaLD;
+        url: http://codepen.io/TaniaLD/
+      */
+
+      /* -------------- dot -------------- */
+        .loader6{
+          position: relative;
+          width: 12px;
+          height: 12px;
+
+          top: 46%;
+          top: -webkit-calc(50% - 6px);
+          top: calc(50% - 6px);
+          left: 46%;
+          left: -webkit-calc(50% - 6px);
+          left: calc(50% - 6px);
+
+          border-radius: 12px;
+          background-color: {{color}};
+          -webkit-transform-origin:  50% 50%;
+              transform-origin:  50% 50% ;
+          -webkit-animation: loader6 1s ease-in-out infinite;
+              animation: loader6 1s ease-in-out infinite;
+        }
+
+        .loader6:before{
+          content: "";
+          position: absolute;
+          background-color: {{color}};
+          opacity: .5;
+          top: 0px;
+          left: -25px;
+          height: 12px;
+          width: 12px;
+          border-radius: 12px;
+        }
+
+        .loader6:after{
+          content: "";
+          position: absolute;
+          background-color: {{color}};
+          opacity: .5;
+          top: 0px;
+          left: 25px;
+          height: 12px;
+          width: 12px;
+          border-radius: 12px;
+        }
+
+
+        @-webkit-keyframes loader6{
+            0%{-webkit-transform:rotate(0deg);}
+            50%{-webkit-transform:rotate(180deg);}
+            100%{-webkit-transform:rotate(180deg);}
+        }
+
+        @keyframes loader6{
+            0%{transform:rotate(0deg);}
+            50%{transform:rotate(180deg);}
+            100%{transform:rotate(180deg);}
+        }
+      </style>
+    </template>
+    <template id="cicle" if="{{type == 'circle'}}">
+      <div class="loader1"></div>
+      <style>
+        /* -------------- circle -------------- */
+        .loader1{
+          position: relative;
+          height: 80px;
+          width: 80px;
+          border-radius: 80px;
+          border: 3px solid {{color}};
+
+          top: 28%;
+          top: -webkit-calc(50% - 43px);
+          top: calc(50% - 43px);
+          left: 35%;
+          left: -webkit-calc(50% - 43px);
+          left: calc(50% - 43px);
+
+          -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+          -webkit-animation: loader1 3s linear infinite;
+              animation: loader1 3s linear infinite;
+        }
+
+        .loader1:after{
+          content: "";
+          position: absolute;
+          top: -5px;
+          left: 20px;
+          width: 11px;
+          height: 11px;
+          border-radius: 10px;
+          background-color: {{color}};
+        }
+
+        @-webkit-keyframes loader1{
+            0%{-webkit-transform:rotate(0deg);}
+            100%{-webkit-transform:rotate(360deg);}
+        }
+
+        @keyframes loader1{
+            0%{transform:rotate(0deg);}
+            100%{transform:rotate(360deg);}
+        }
+      </style>
+    </template>
+  </template>
+  <script>
+    Polymer('web-loader', {
+      type: "circle",
+      color: "#95a5a6"
+    });
+  </script>
+</polymer-element>
