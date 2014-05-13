@@ -9,19 +9,19 @@ Web Component Loaders/Spinners in CSS3 [Web Loader] using Polymer.
 
 1. Import Web Components' polyfill:
 
-  ```xml
-<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130816/polymer.min.js"></script>
+  ```html
+<script src="bower_components/platform/platform.js"></script>
   ```
 
 2. Import Custom Element:
 
-  ```xml
+  ```html
 <link rel="import" href="src/web-loader.html">
   ```
 
 3. Start using it!
 
-  ```xml
+  ```html
 <web-loader></web-loader>
   ```
 
@@ -48,7 +48,7 @@ IE 10+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
 ## History
 
-Check [Release](https://github.com/mvaldetaro/MyWebComponents/commits/master/web-loader) list.
+Check [Release](https://github.com/mvaldetaro/web-loader/releases) list.
 
 ## License
 
