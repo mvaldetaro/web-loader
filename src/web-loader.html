@@ -1,9 +1,9 @@
 <link rel="import" href="../polymer/polymer.html">
 
-<polymer-element name="web-loader" attributes="type color">
+<polymer-element name="web-loader" attributes="type color display">
   <template>
     <template id="dot" if="{{type == 'dot'}}">
-      <div class="loader6"></div>
+      <div class="loader6" style="display: {{display}};"></div>
       <style>
       /*
         author: TaniaLD;
@@ -69,8 +69,8 @@
         }
       </style>
     </template>
-    <template id="cicle" if="{{type == 'circle'}}">
-      <div class="loader1"></div>
+    <template id="circle" if="{{type == 'circle'}}">
+      <div class="loader1" style="display: {{display}};"></div>
       <style>
         /* -------------- circle -------------- */
         .loader1{
@@ -119,7 +119,8 @@
   <script>
     Polymer('web-loader', {
       type: "circle",
-      color: "#95a5a6"
+      color: "#95a5a6",
+      display: "block"
     });
   </script>
 </polymer-element>
