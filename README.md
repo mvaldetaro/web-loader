@@ -16,7 +16,7 @@ Web Component Loaders/Spinners in CSS3 [Web Loader] using Polymer.
 2. Import Custom Element:
 
   ```html
-<link rel="import" href="src/web-loader.html">
+<link rel="import" href="bower_components/web-loader/src/web-loader.html">
   ```
 
 3. Start using it!
@@ -29,8 +29,9 @@ Web Component Loaders/Spinners in CSS3 [Web Loader] using Polymer.
 
 Attribute | Options         | Default                    | Description
 ---       | ---             | ---                        | ---
-`type`    | `circle`, `dot` | `circle`                   | The type of loader
+`type`    | `circle`, `dot`, `clock` | `circle`                   | The type of loader
 `color`   | *hex*           | `#000000`                  | The color of loader
+`display` | `block`, `none` | `block`                  | The visibility of loader
 
 ## Browser Support
 
