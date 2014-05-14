@@ -5,6 +5,16 @@ Web Component Loaders/Spinners in CSS3 [Web Loader] using Polymer.
 ## Demo
 > [Check it live](http://ifly9.com.br/webcomponents/web-loader/).
 
+## Install
+
+Install the component using [Bower](http://bower.io/):
+
+```sh
+$ bower install web-loader --save
+```
+
+Or [download as ZIP](https://github.com/mvaldetaro/web-loader/archive/master.zip).
+
 ## Usage
 
 1. Import Web Components' polyfill:
