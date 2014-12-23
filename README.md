@@ -40,8 +40,41 @@ Or [download as ZIP](https://github.com/mvaldetaro/web-loader/archive/master.zip
 Attribute | Options         | Default                    | Description
 ---       | ---             | ---                        | ---
 `type`    | `circle`, `dot`, `clock` | `circle`                   | The type of loader
-`color`   | *hex*           | `#000000`                  | The color of loader
 `display` | `block`, `none` | `block`                  | The visibility of loader
+`styleOverride` | `web-loader`, `anything-else` | `web-loader`  | Specifies the reference ID of the core-style to use for overriding default stylings
+
+## Styling
+
+Styling is done through the use of a core-style element. All you have to do is declare a core-style element in your site with an ID that matches the `styleOverride` property of the `web-loader` component (defaults to `web-loader`). 
+For example:
+```html
+  <core-style id="web-loader">
+      .circle{
+        border: 3px solid #333333;
+      }
+      .circle:after{
+        background-color: #333333;
+      }
+      .clock{
+        border: 3px solid #333333;
+      }
+      .clock:after{
+        background-color: #333333;
+      }
+      .clock:before{
+        background-color: #333333;
+      }
+      .dot{
+        background-color: #333333;
+      }
+      .dot:before{
+        background-color: #333333;
+      }
+      .dot:after{
+        background-color: #333333;
+      }
+  </core-style>
+  ```
 
 ## Browser Support
 
